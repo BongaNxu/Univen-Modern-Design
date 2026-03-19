@@ -8,12 +8,13 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://nebworksmedia.com/wp-content/uploads/2026/03/ousa-chea-gKUC4TMhOiY-unsplash-1-scaled-1.jpg" 
+          src="https://nebworksmedia.com/wp-content/uploads/2026/03/server-farm-team-leader.jpg" 
+          // src="https://nebworksmedia.com/wp-content/uploads/2026/03/ousa-chea-gKUC4TMhOiY-unsplash-1-scaled-1.jpg" 
           alt="University Campus" 
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        // <div className="absolute inset-0 bg-gradient-to-r from-univen-blue/90 via-univen-blue/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-univen-blue/90 via-univen-blue/60 to-transparent"></div> 
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

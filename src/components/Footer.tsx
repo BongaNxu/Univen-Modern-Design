@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = [
@@ -8,7 +9,7 @@ const Footer = () => {
       links: [
         { name: 'Apply Now', href: '#' },
         { name: 'Student Portal', href: '#' },
-        { name: 'Library', href: '#' },
+        { name: 'Library', href: '/library' },
         { name: 'Vacancies', href: '#' },
         { name: 'Tenders', href: '#' },
       ]
@@ -16,8 +17,8 @@ const Footer = () => {
     {
       title: 'Academic',
       links: [
-        { name: 'Faculties', href: '#' },
-        { name: 'Research', href: '#' },
+        { name: 'Faculties', href: '/faculties' },
+        { name: 'Research', href: '/research' },
         { name: 'Calendar', href: '#' },
         { name: 'Exams', href: '#' },
         { name: 'Short Courses', href: '#' },
@@ -27,10 +28,10 @@ const Footer = () => {
       title: 'Support',
       links: [
         { name: 'IT Helpdesk', href: '#' },
-        { name: 'Campus Security', href: '#' },
-        { name: 'Health Services', href: '#' },
-        { name: 'Counseling', href: '#' },
-        { name: 'Disability Unit', href: '#' },
+        { name: 'Campus Security', href: '/services' },
+        { name: 'Health Services', href: '/services' },
+        { name: 'Counseling', href: '/services' },
+        { name: 'Disability Unit', href: '/services' },
       ]
     }
   ];
@@ -41,12 +42,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <img 
-              src="https://www.univen.ac.za/wp-content/uploads/2021/04/univen-logo.png" 
-              alt="University of Venda" 
-              className="h-20 mb-8 brightness-0 invert"
-              referrerPolicy="no-referrer"
-            />
             <p className="text-slate-400 mb-8 max-w-sm leading-relaxed">
               The University of Venda is a comprehensive university situated in Thohoyandou, Limpopo Province, South Africa. We are committed to excellence in teaching, research, and community engagement.
             </p>
@@ -66,10 +61,10 @@ const Footer = () => {
               <ul className="space-y-4">
                 {section.links.map((link, j) => (
                   <li key={j}>
-                    <a href={link.href} className="text-slate-400 hover:text-white transition-colors flex items-center group text-sm">
+                    <Link to={link.href} className="text-slate-400 hover:text-white transition-colors flex items-center group text-sm">
                       <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
